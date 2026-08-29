@@ -9,3 +9,4 @@ GitHub push practice completed.
 This change was made directly on GitHub.
 
 Pull Request practice completed.
+Fetch practice - change made on GitHub.
