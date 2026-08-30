@@ -12,3 +12,5 @@ Pull Request practice completed.
 Fetch practice - change made on GitHub.
 
 Reset and revert practice - first change.
+
+Git tag release v1.1.0 practice.
