@@ -37,12 +37,12 @@ jobs:
       - name: Conditional step
         if: success()
         run: echo "All previous steps succeeded!"
-      - name: Test failure condition
+      - name: Simulate failure
         run: |
-          echo "This step will fail"
+          echo "Something went wrong!"
           exit 1
 
-      - name: Run after failure
-        if: success()
-        run: echo "This should NOT run"
+      - name: Failure handler
+        if: failure()
+        run: echo "A previous step failed. Running failure handler."
           
