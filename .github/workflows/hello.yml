@@ -19,3 +19,8 @@ jobs:
 
       - name: Show Git version
         run: git --version
+      - name: Create test file
+        run: echo "Hello from CI" > test.txt
+
+      - name: Check test file
+        run: cat test.txt
