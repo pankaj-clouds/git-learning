@@ -13,3 +13,9 @@ jobs:
 
       - name: Show files
         run: ls
+
+      - name: Show current directory
+        run: pwd
+
+      - name: Show Git version
+        run: git --version
