@@ -32,5 +32,5 @@ jobs:
       - name: Intentional Failure
         run: |
           echo "Testing failure..."
-          test -f missing.txt
-          echo "This line will not execute"
+          test -f test.txt
+          echo "This line will  execute now because we fix it"
