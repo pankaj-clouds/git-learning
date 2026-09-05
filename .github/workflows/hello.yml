@@ -29,3 +29,8 @@ jobs:
           echo "Running CI check..."
           test -f test.txt
           echo "CI check passed!"
+      - name: Intentional Failure
+        run: |
+          echo "Testing failure..."
+          test -f missing.txt
+          echo "This line will not execute"
