@@ -34,4 +34,7 @@ jobs:
           echo "Testing test file..."
           test -f test.txt
           echo "Test file exists - CI check passed!"
+      - name: Conditional step
+        if: success()
+        run: echo "All previous steps succeeded!"
           
