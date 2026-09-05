@@ -37,4 +37,12 @@ jobs:
       - name: Conditional step
         if: success()
         run: echo "All previous steps succeeded!"
+      - name: Test failure condition
+        run: |
+          echo "This step will fail"
+          exit 1
+
+      - name: Run after failure
+        if: success()
+        run: echo "This should NOT run"
           
