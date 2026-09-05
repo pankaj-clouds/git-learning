@@ -1,12 +1,15 @@
-name: My First GitHub Actions
+name: My First CI
 
 on:
   push:
 
 jobs:
-  hello:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Say Hello
-        run: echo "Hello Pankaj! GitHub Actions is working."
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Show files
+        run: ls
