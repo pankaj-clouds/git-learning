@@ -24,3 +24,8 @@ jobs:
 
       - name: Check test file
         run: cat test.txt
+      - name: CI Check
+        run: |
+          echo "Running CI check..."
+          test -f test.txt
+          echo "CI check passed!"
