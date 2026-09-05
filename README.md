@@ -7,6 +7,8 @@ This change was made directly on the main branch.
 This change was made on the three-way merge branch.
 GitHub push practice completed.
 This change was made directly on GitHub.
-
 Pull Request practice completed.
+
 Fetch practice - change made on GitHub.
+
+Reset and revert practice - first change.
