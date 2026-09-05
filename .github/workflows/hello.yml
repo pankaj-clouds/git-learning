@@ -29,8 +29,9 @@ jobs:
           echo "Running CI check..."
           test -f test.txt
           echo "CI check passed!"
-      - name: Intentional Failure
+      - name: Verify test file
         run: |
-          echo "Testing failure..."
+          echo "Testing test file..."
           test -f test.txt
-          echo "This line will  execute now because we fix it"
+          echo "Test file exists - CI check passed!"
+          
