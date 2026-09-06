@@ -42,7 +42,13 @@ jobs:
         run: echo "All previous steps succeeded!" 
       - name: Show application name
         run: echo "Application is $APP_NAME"
-      - name: Test GitHub Secret
-        run: echo "Secret is $DEMO_SECRET"
+      - name: Use Secret Safely
+        run: |
+          if [ -n "$DEMO_SECRET" ]; then
+            echo "Secret is available to the application"
+          else
+            echo "Secret is missing"
+            exit 1
+          fi
         env:
           DEMO_SECRET: ${{ secrets.DEMO_SECRET }}
