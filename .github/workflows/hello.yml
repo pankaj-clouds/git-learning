@@ -6,6 +6,8 @@ on:
 
 jobs:
   test:
+    env:
+      APP_NAME: Banking-App
     runs-on: ubuntu-latest
 
     steps:
@@ -37,4 +39,6 @@ jobs:
           echo "Test file exists - CI check passed!"
       - name: Conditional step
         if: success()
-        run: echo "All previous steps succeeded!"         
+        run: echo "All previous steps succeeded!" 
+      - name: Show application name
+        run: echo "Application is $APP_NAME"
