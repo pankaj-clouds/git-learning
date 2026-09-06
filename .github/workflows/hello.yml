@@ -59,3 +59,5 @@ jobs:
           fi
         env:
           DEMO_SECRET: ${{ secrets.DEMO_SECRET }}
+      - name: Show selected environment
+        run: echo "Selected environment is ${{ inputs.environment }}"
